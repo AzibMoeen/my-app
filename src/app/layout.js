@@ -1,4 +1,4 @@
-import { ClerkProvider, ClerkLoading, ClerkLoaded } from "@clerk/nextjs";
+
 import "./global.css"; 
 export const metadata = {
   title: "Recruiter",
@@ -7,23 +7,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    
       <html lang="en">
         <body>
-          <ClerkLoading>
-            <div className="flex items-center justify-center h-screen text-2xl">
-              LOADING...
-            </div>
-          </ClerkLoading>
-          <ClerkLoaded>
-            <div className="max-w-6xl mx-auto">
-              <div className="flex flex-col h-screen">
+          
                 {children}
-              </div>
-            </div>
-          </ClerkLoaded>
+              
         </body>
       </html>
-    </ClerkProvider>
+    
   );
 }
